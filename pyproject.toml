@@ -1,0 +1,26 @@
+[project]
+name = "pace"
+version = "0.2.0"
+description = "PACE: Parent-child AI Communication Empathizer - Empathy coach chatbot with BART pre-LLM guard. Supports Ollama, Groq, OpenAI, Anthropic, and any OpenAI-compatible endpoint."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi>=0.110",
+  "uvicorn[standard]>=0.27",
+  "pydantic>=2.6",
+  "python-dotenv>=1.0",
+  "requests>=2.31",
+  "transformers>=4.41",
+  "torch>=2.2",
+]
+
+[project.scripts]
+pace-dev = "app.main:run"
+
+[tool.uv]
+# This tells uv to treat the directory as an installable package
+package = false 
+
+[dependency-groups]
+# This replaces the deprecated tool.uv.dev-dependencies
+dev = []
