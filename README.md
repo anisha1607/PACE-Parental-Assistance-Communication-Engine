@@ -115,9 +115,3 @@ This runs all 30 test cases and prints:
 
 ---
 
-## GCP Deployment
-
-- Deploy the FastAPI app on Cloud Run
-- Set all env vars (API keys, `LLM_PROVIDER`, `LLM_MODEL`) in Cloud Run → Edit → Variables & Secrets
-- Never upload `.env` to GitHub — use Cloud Run environment variables instead
-- The BART guard runs on CPU (latency ~1-2s on first request, cached after)
